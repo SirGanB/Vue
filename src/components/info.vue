@@ -12,14 +12,17 @@
       <a v-bind:href="linkedin" target="_blank">Linkedin</a>
     </p>
 
-    <p>Conheço as seguintes tecnologias:</p>
+    <p>Conhecimento nas Linguagens:</p>
     <ul>
-      <li>Dart/Flutter</li>
+      <li v-for="(technology, index) in languages" :key="index">
+        {{ technology }}
+      </li>
     </ul>
-    <p>Estudando Atualmente:</p>
+    <p>Conhecimento nos Frameworks:</p>
     <ul>
-      <li>Dart/Flutter</li>
-      <li>JavaScript/Vue</li>
+      <li v-for="technology in frameworks" :key="technology.id">
+        {{ technology.language }}
+      </li>
     </ul>
   </div>
 </template>
@@ -34,6 +37,13 @@ export default {
       linkedin:
         "https://www.linkedin.com/in/gustavo-amorim-novaes-bueno-821b61237/",
       button_text: "Mostrar E-Mail",
+      //Array de String
+      languages: ["Dart", "C#", "JavaScript", "DokaLanguage"],
+      //Array de Object
+      frameworks: [
+        { id: 1, language: "Flutter" },
+        { id: 2, language: "Vue.js" },
+      ],
     };
   },
   methods: {
