@@ -1,22 +1,35 @@
 <template>
   <div>
-    <primeiro_componente/>
-    <life_cycle/>
-    <people/>
+    <custom_header />
+    <primeiro_componente />
+    <life_cycle />
+    <people />
   </div>
 </template>
 
 <script>
-import life_cycle from './components/life_cycle.vue';
-import people from './components/people.vue';
-import primeiro_componente from './components/primeiro_componente.vue';
+import custom_header from "./components/custom_header.vue";
+import life_cycle from "./components/life_cycle.vue";
+import people from "./components/people.vue";
+import primeiro_componente from "./components/primeiro_componente.vue";
 
-  export default {
-    name: 'App',
-    components: {
-      life_cycle,
-      people,
-      primeiro_componente,
-    }
-  }
+export default {
+  name: "App",
+  components: {
+    custom_header,
+    life_cycle,
+    people,
+    primeiro_componente,
+  },
+};
 </script>
+
+<style>
+body {
+  background-color: black;
+  color: white;
+}
+a {
+  color: greenyellow;
+}
+</style>
