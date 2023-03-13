@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button @click="showEmail">{{ button_text }}</button>
+    <button @click="showEmail">{{ buttonText }}</button>
 
-    <p v-if="isPublic">E-Mail: ganb.tads@gmail.com</p>
+    <p v-if="isPublic">E-Mail: {{ email }}</p>
 
     <p v-if="isWorking">Situação: Empregado.</p>
     <p v-else>Situação: Buscando por oportunidades.</p>
@@ -30,13 +30,16 @@
 <script>
 export default {
   name: "info",
+  props: {
+    email: String,
+    isWorking: Boolean,
+  },
   data() {
     return {
       isPublic: false,
-      isWorking: true,
       linkedin:
         "https://www.linkedin.com/in/gustavo-amorim-novaes-bueno-821b61237/",
-      button_text: "Mostrar E-Mail",
+      buttonText: "Mostrar E-Mail",
       //Array de String
       languages: ["Dart", "C#", "JavaScript", "DokaLanguage"],
       //Array de Object
@@ -51,9 +54,9 @@ export default {
       this.isPublic = !this.isPublic;
 
       if (!this.isPublic) {
-        this.button_text = "Mostrar E-Mail";
+        this.buttonText = "Mostrar E-Mail";
       } else {
-        this.button_text = "Esconder E-Mail";
+        this.buttonText = "Esconder E-Mail";
       }
     },
   },

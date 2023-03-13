@@ -29,7 +29,7 @@ export default {
         this.multiple_events = "/clear";
       }, 1500);
       setTimeout(() => {
-        this.multiple_events = "...";
+        this.multiple_events = "....";
       }, 2000);
       setTimeout(() => {
         this.multiple_events = "...";
