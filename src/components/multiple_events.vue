@@ -9,7 +9,7 @@
 
 <script >
 export default {
-  name: "Multiple Events",
+  name: "multiple_events",
   data() {
     return {
       multiple_events: "",

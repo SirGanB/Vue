@@ -1,6 +1,6 @@
 <template>
   <div>
-    <custom_header v-bind:isLogged="false" />
+    <custom_header v-bind:isLogged="true" />
     <primeiro_componente />
     <life_cycle />
     <people />
